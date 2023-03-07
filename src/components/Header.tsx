@@ -2,9 +2,9 @@ import MenuItem from "./MenuItem";
 import { AiFillHome } from "react-icons/ai";
 import {BiSearchAlt2} from "react-icons/bi";
 import { HiInformationCircle } from "react-icons/hi";
-import { BsFillSunFill } from "react-icons/bs";
 
 import Link from "next/link";
+import ThemeModeSwitch from "./ThemeModeSwitch";
 
 const menu = [
     {
@@ -34,8 +34,8 @@ const Header = () => {
                     ))
                 }
             </div>
-            <div className="flex items-center gap-4">
-                <BsFillSunFill className="text-xl hover:text-amber-500 cursor-pointer" />
+            <div className="flex items-center space-x-5">
+                <ThemeModeSwitch />
                 <Link href="/">
                     <h2 className="text-2xl">
                         <span className="font-bold bg-amber-500 py-1 px-2 rounded-lg mr-1 text-white">IMDB</span>

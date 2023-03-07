@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .icon {
+      @apply text-xl hover:text-amber-500 cursor-pointer
+    }
+  }

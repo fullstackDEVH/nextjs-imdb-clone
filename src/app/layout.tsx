@@ -1,6 +1,8 @@
-import Header from '@/components/Header'
-import Navbar from '@/components/Navbar'
-import './globals.css'
+import Header from '@/components/Header';
+import Navbar from '@/components/Navbar';
+import './globals.css';
+import { ThemeProvider } from 'next-themes';
+import Provider from '@/components/ProviderTheme';
 
 export default function RootLayout({
   children,
@@ -9,12 +11,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* Header  */}
-      <Header />
-      {/* Navbar */}
-      <Navbar />
-      {/* Search Box */}
-      <body>{children}</body>
+   
+      <body>
+        <Provider>
+          <Header />
+          <Navbar />
+
+          {children}
+        </Provider>
+      
+      </body>
     </html>
   )
 };

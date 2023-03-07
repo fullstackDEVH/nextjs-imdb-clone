@@ -1,3 +1,4 @@
+import Card from "@/components/Card";
 
 const fetchTrending = async (genre : string) => {
   const key = process.env.API_TMDB_KEY;
@@ -13,11 +14,18 @@ const fetchTrending = async (genre : string) => {
 }
 
 export default async function Home( { searchParams } : any ) {
-  // console.log(process.env.API_TMDB);
   const genreType = searchParams.genre ?? "fetchTrending";
   const data = await fetchTrending(genreType);
-  
+    
   return (
-    <div className="text-red-600">Home</div>
+    <div className="mt-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto gap-4">
+            {
+                data?.results.map((item : any) => (
+                    <Card key={item.id} item={item} />
+                ))
+            }
+        </div>
+    </div>
   )
-}
+};

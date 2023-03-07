@@ -1,7 +1,7 @@
 const About = () => {
   return (
-    <div className="max-w-6xl mx-auto space-y-3">
-      <h2 className="text-2xl text-amber-500 font-medium">about</h2>
+    <div className="max-w-6xl mx-auto space-y-3 mt-4">
+      <h2 className="text-3xl text-amber-500 font-medium text-center">About Us</h2>
       <p>
         IMDb (an abbreviation of Internet Movie Database)[2] is an online
         database of information related to films, television series, podcasts,

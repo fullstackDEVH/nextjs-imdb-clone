@@ -7,16 +7,17 @@ const Card = ({ item }: any) => {
   return (
     <div className="p-2 rounded-lg border-gray-200 border-2 border-solid group cursor-pointer sm:shadow-md sm:hover:shadow-slate-400 sm:shadow-md">
       <Link href={`movies/${item.id}`}>
-        <div className="img">
+        <div className="">
           <Image
             src={`https://image.tmdb.org/t/p/original/${
               item.backdrop_path || item.poster_path
             }`}
             width={500}
             height={300}
+            style={{height: "100%"}}
             alt="poster"
             placeholder="blur"
-            blurDataURL="https://raw.githubusercontent.com/sahandghavidel/imdb/33eceff249090c119366047423cb81fa2f1c5d76/public/spinner.svg"
+            blurDataURL="/spinner.svg"
           />
         </div>
 

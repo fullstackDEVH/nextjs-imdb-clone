@@ -9,6 +9,7 @@ async function getMovie(movieId : any) {
 
 const MovieDetail = async ( {params } : any) => {
     const movieId = params.id;
+
     const movie = await getMovie(movieId);
 
     return (

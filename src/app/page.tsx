@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import Test from "./Test";
 
 const fetchTrending = async (genre : string) => {
   const key = process.env.API_TMDB_KEY;
@@ -21,6 +22,7 @@ export default async function Home( { searchParams } : any ) {
   }
   return (
     <div className="mt-6">
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-6xl mx-auto gap-4">
             {
                 data?.results.map((item : any) => (
@@ -28,6 +30,8 @@ export default async function Home( { searchParams } : any ) {
                 ))
             }
         </div>
+
+        <Test />
     </div>
   )
 };

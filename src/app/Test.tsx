@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const Test = () => {
-    const [test, setTest ] = useState("123");
+    const [test, setTest ] = useState({name : "huy"});
   useEffect(() => {
     const data = async () => {
       const res = await fetch("http://113.160.226.174:50003/api/auth/login", {
@@ -27,7 +27,7 @@ const Test = () => {
   return <div>test
     <p>
         {
-            JSON.parse(test)
+            JSON.stringify(test)
         }
     </p>
   </div>;
